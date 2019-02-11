@@ -13,17 +13,10 @@
 #include "debugmalloc.h"
 
 /* The use of dlmalloc/malloc.c below requires stdc names from these headers */
-#if !defined(OE_NEED_STDC_NAMES)
 #define OE_NEED_STDC_NAMES
-#define __UNDEF_OE_NEED_STDC_NAMES
-#endif
-#include <openenclave/corelibc/bits/stdfile.h>
-#include <openenclave/corelibc/errno.h>
-#include <openenclave/corelibc/sched.h>
-#if defined(__UNDEF_OE_NEED_STDC_NAMES)
-#undef OE_NEED_STDC_NAMES
-#undef __UNDEF_OE_NEED_STDC_NAMES
-#endif
+#include <openenclave/corelibc/bits/stdfile.h> // For stderr & FILE
+#include <openenclave/corelibc/errno.h>        // For errno & error defs
+#include <openenclave/corelibc/sched.h>        // For sched_yield
 
 #define HAVE_MMAP 0
 #define LACKS_UNISTD_H
@@ -36,8 +29,6 @@
 #define LACKS_STDLIB_H
 #define LACKS_STRING_H
 #define USE_LOCKS 1
-#define size_t size_t
-#define ptrdiff_t ptrdiff_t
 #define sbrk oe_sbrk
 #define fprintf _dlmalloc_stats_fprintf
 
