@@ -29,4 +29,27 @@
 
 #endif /* defined(OE_NEED_STDC_NAMES) */
 
+#if defined(OE_REMOVE_STDC_DEFINES)
+
+#undef SCHAR_MIN
+#undef SCHAR_MAX
+#undef UCHAR_MAX
+#undef CHAR_MIN
+#undef CHAR_MAX
+#undef CHAR_BIT
+#undef SHRT_MIN
+#undef SHRT_MAX
+#undef USHRT_MAX
+#undef INT_MIN
+#undef INT_MAX
+#undef UINT_MAX
+#undef LONG_MAX
+#undef LONG_MIN
+#undef ULONG_MAX
+#undef LLONG_MAX
+#undef LLONG_MIN
+#undef ULLONG_MAX
+
+#endif /* defined(OE_REMOVE_STDC_DEFINES) */
+
 #endif /* _OE_LIMITS_H */
