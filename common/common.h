@@ -15,6 +15,7 @@
 #ifdef OE_BUILD_ENCLAVE
 
 #include <openenclave/enclave.h>
+
 #include <openenclave/corelibc/stdint.h>
 #include <openenclave/corelibc/stdio.h>
 #include <openenclave/corelibc/stdlib.h>
@@ -23,6 +24,7 @@
 #else
 
 #include <openenclave/host.h>
+
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
