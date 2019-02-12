@@ -3,7 +3,6 @@
 
 #include <assert.h>
 #include <errno.h>
-#include <openenclave/corelibc/string.h>
 #include <openenclave/enclave.h>
 #include <openenclave/internal/calls.h>
 #include <openenclave/internal/raise.h>
@@ -40,7 +39,7 @@ void exit(int status)
 
 char* oe_host_strdup(const char* str)
 {
-    size_t n = oe_strlen(str);
+    size_t n = strlen(str);
     char* dup = (char*)oe_host_malloc(n + 1);
 
     if (dup)
