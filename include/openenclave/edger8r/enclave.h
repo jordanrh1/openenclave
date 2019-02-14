@@ -35,6 +35,13 @@ typedef void (*oe_ecall_func_t)(
     size_t* output_bytes_written);
 
 /**
+ * Get the internal status of the enclave.
+ *
+ * @returns read-only copy of the internal status.
+ */
+oe_result_t oe_get_enclave_status();
+
+/**
  * Perform a high-level host function call (OCALL).
  *
  * Call the host function whose matching the given function_id.
